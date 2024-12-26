@@ -5,13 +5,20 @@
     padding: 0;
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     background-color: #fff;
     padding-block: 1rem;
 }
 
 .nav-content{
-    border: 2px solid;
+    /* border: 2px solid; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,6 +70,7 @@ nav{
 /* styling for hero section */
 .hero-sec{
     background: linear-gradient(90deg, #f3f7f7 67%, #034e52 35%);
+    padding-top: 1.5rem;
 }
 
 .hero{
@@ -204,5 +212,146 @@ select{
     background-color: #fff;
 }
 
+/* styling for discover doctor section  */
 
+.discover-doctor{
+    background: color #e6edee; 
+    padding-block: 3rem;
+    
+}
 
+.discover> h4{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.discover>h4>span{
+    background-color: #034e52;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover>h1{
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.discover-doctors-wrapper{
+   /* border: 2px solid red; */
+   margin-top: 2.5rem;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 2rem;
+   display: grid;
+
+}
+
+.doctor-card{
+    border: 2px solid black;
+    height: 30vh;
+    padding: 2rem 1rem;
+    display: flex;
+    /* gap: 1rem; */
+    border-radius: 20px;
+    background-color:#fff;
+    align-items: center;
+}
+
+.doctor-card-content> h3{
+    text-transform: capitalize;
+    font-size: 18px;
+    width: 200px;
+}
+
+.doctor-card-content>ul{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.doctor-card-content>ul>li{
+    list-style: none;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.doctor-card>img{
+    border: 2px solid black;
+    width: 50%;
+}
+
+.doctor-card-content{
+    width: 50%;
+}
+
+    /* responsive styling with media query */
+   @media(min-width:320px) and (max-width:460px){
+    
+    .nav-content{
+        width: calc(100% - 30px);
+    }
+
+   .nav-right{
+    display: none;
+   }
+
+   .hero-sec{
+    background: #034e52;
+    width: calc(100% - 30px);
+   }
+
+   .hero{
+    width: calc(100% - 30px);
+    flex-direction: column;
+    /* flex-direction: coulmn-reverse: */
+   }
+
+   .hero-content{
+    width: 100%;
+   }
+
+   .hero-content>h1{
+    width: 100%;
+   }
+
+   .hero-image{
+    width: 100%;
+   }
+
+   .hero-btn>btn{
+    background-color: #fff;
+    color: #467c7f;
+   }
+
+   .service-card-wrapper{
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+    gap: 2rem;
+   }
+
+   .service-card{
+    width: 100%;
+    padding-inline: 0;
+
+   }
+
+   .discover>h1{
+    font-size: 2rem;
+   }
+
+   .discover-doctors-wrapper{
+    grid-template-columns: 1;
+    width: calc(100%-30px);
+   }
+
+   } 
